@@ -1,0 +1,40 @@
+@use "utils" as *;
+@use "variables" as *;
+
+.article {
+  display: grid;
+  grid-template-columns: min-content auto;
+  grid-template-rows: min-content min-content min-content;
+
+  // column-gap: var(--sp-6);
+  // row-gap: var(--sp-2);
+
+  grid-template-areas:
+    "img subtitle"
+    "img title"
+    "img desc";
+
+  margin-block-end: var(--sp-7);
+}
+
+.article img {
+  grid-area: img;
+}
+
+.article span {
+  grid-area: subtitle;
+
+  font-size: var(--sp-7);
+  font-weight: var(--fw-normal);
+  color: var(--clr-primary);
+  line-height: 1;
+}
+
+.article a {
+  grid-area: title;
+  line-height: 1;
+}
+
+.article p {
+  grid-area: desc;
+}

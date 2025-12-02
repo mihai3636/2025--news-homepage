@@ -1,0 +1,45 @@
+@use "utils" as *;
+@use "variables" as *;
+
+.news {
+  background-color: var(--clr-grey-4);
+  color: var(--clr-grey-2);
+  padding: var(--sp-5) var(--sp-6);
+}
+
+.news li {
+  list-style: none;
+  padding-block-end: var(--sp-6);
+}
+
+.news li:not(:last-child) {
+  margin-block-end: var(--sp-6);
+  border-bottom: 1px solid var(--clr-grey-2);
+}
+
+.news__title {
+  color: var(--clr-accent);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-8);
+
+  margin-block-end: var(--sp-5);
+}
+
+.news__subtitle a {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-5);
+  margin-block-end: var(--sp-3);
+
+  &:link,
+  &:visited {
+    color: var(--clr-white);
+  }
+
+  &:hover,
+  &:active {
+    color: var(--clr-accent);
+  }
+}
+
+.news p {
+}
