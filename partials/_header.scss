@@ -1,0 +1,27 @@
+@use "utils" as *;
+@use "variables" as *;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  margin-block-end: var(--sp-7);
+}
+
+.navigation {
+  display: flex;
+  display: none;
+}
+
+.img-burger {
+}
+
+.img-close {
+  display: none;
+}
+
+.header button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
