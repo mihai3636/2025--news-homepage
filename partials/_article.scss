@@ -7,7 +7,7 @@
   grid-template-rows: auto auto auto;
 
   column-gap: var(--sp-6);
-  // row-gap: var(--sp-2);
+  align-items: center;
 
   grid-template-areas:
     "img subtitle"
@@ -19,13 +19,13 @@
 
 .article img {
   grid-area: img;
-  min-width: 120px;
+  min-width: 100px;
 }
 
 .article span {
   grid-area: subtitle;
 
-  font-size: var(--sp-8);
+  font-size: var(--sp-7);
   font-weight: var(--fw-normal);
   color: var(--clr-primary);
   line-height: 1;
@@ -35,7 +35,7 @@
   grid-area: title;
 
   line-height: 1;
-  font-size: var(--fs-6);
+  font-size: var(--fs-5);
   font-weight: var(--fw-normal);
 
   &:hover,
@@ -46,5 +46,6 @@
 
 .article p {
   grid-area: desc;
+  font-size: var(--fs-3);
   line-height: 1.6;
 }
