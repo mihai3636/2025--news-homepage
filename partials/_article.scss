@@ -4,9 +4,9 @@
 .article {
   display: grid;
   grid-template-columns: min-content auto;
-  grid-template-rows: min-content min-content min-content;
+  grid-template-rows: auto auto auto;
 
-  // column-gap: var(--sp-6);
+  column-gap: var(--sp-6);
   // row-gap: var(--sp-2);
 
   grid-template-areas:
@@ -19,12 +19,13 @@
 
 .article img {
   grid-area: img;
+  min-width: 120px;
 }
 
 .article span {
   grid-area: subtitle;
 
-  font-size: var(--sp-7);
+  font-size: var(--sp-8);
   font-weight: var(--fw-normal);
   color: var(--clr-primary);
   line-height: 1;
@@ -32,9 +33,18 @@
 
 .article a {
   grid-area: title;
+
   line-height: 1;
+  font-size: var(--fs-6);
+  font-weight: var(--fw-normal);
+
+  &:hover,
+  &:active {
+    color: var(--clr-primary);
+  }
 }
 
 .article p {
   grid-area: desc;
+  line-height: 1.6;
 }

@@ -63,7 +63,6 @@ button {
 
 img {
   max-width: 100%;
-  min-width: 120px;
   display: block;
 }
 
@@ -190,18 +189,20 @@ a:visited {
 .article {
   display: grid;
   grid-template-columns: min-content auto;
-  grid-template-rows: min-content min-content min-content;
+  grid-template-rows: auto auto auto;
+  column-gap: var(--sp-6);
   grid-template-areas: "img subtitle" "img title" "img desc";
   margin-block-end: var(--sp-7);
 }
 
 .article img {
   grid-area: img;
+  min-width: 120px;
 }
 
 .article span {
   grid-area: subtitle;
-  font-size: var(--sp-7);
+  font-size: var(--sp-8);
   font-weight: var(--fw-normal);
   color: var(--clr-primary);
   line-height: 1;
@@ -210,10 +211,16 @@ a:visited {
 .article a {
   grid-area: title;
   line-height: 1;
+  font-size: var(--fs-6);
+  font-weight: var(--fw-normal);
+}
+.article a:hover, .article a:active {
+  color: var(--clr-primary);
 }
 
 .article p {
   grid-area: desc;
+  line-height: 1.6;
 }
 
 /*# sourceMappingURL=styles.css.map */
