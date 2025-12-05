@@ -85,10 +85,6 @@ a:visited {
   display: inline-block;
 }
 
-.section {
-  margin-block-end: var(--sp-8);
-}
-
 .text-huge {
   color: var(--clr-grey-4);
   font-size: var(--fs-10);
@@ -100,10 +96,42 @@ a:visited {
   margin-inline: auto;
 }
 
+.grid {
+  display: grid;
+  row-gap: var(--sp-7);
+}
+@media (min-width: 43.75rem) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--sp-5);
+    grid-template-areas: "header header" "img img" "content content" "news news" "card1 card2" "card3 card3";
+  }
+  .grid .header {
+    grid-area: header;
+  }
+  .grid picture {
+    grid-area: img;
+  }
+  .grid .main__content {
+    grid-area: content;
+  }
+  .grid aside {
+    grid-area: news;
+  }
+  .grid .article:nth-of-type(1) {
+    grid-area: card1;
+  }
+  .grid .article:nth-of-type(2) {
+    grid-area: card2;
+  }
+  .grid .article:last-of-type {
+    grid-area: card3;
+  }
+}
+
 .header {
   display: flex;
   justify-content: space-between;
-  margin-block-end: var(--sp-7);
 }
 
 .navigation {
@@ -156,12 +184,10 @@ a:visited {
   color: var(--clr-accent);
 }
 
-.main > picture > img {
-  margin-block-end: var(--sp-6);
-}
-
-.main__title {
-  margin-block-end: var(--sp-4);
+.main__content {
+  display: grid;
+  grid-template-columns: subgrid;
+  row-gap: var(--sp-5);
 }
 
 .main__content p {
@@ -193,7 +219,6 @@ a:visited {
   column-gap: var(--sp-6);
   align-items: center;
   grid-template-areas: "img subtitle" "img title" "img desc";
-  margin-block-end: var(--sp-7);
 }
 
 .article img {

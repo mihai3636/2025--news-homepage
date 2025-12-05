@@ -23,7 +23,7 @@ a:visited {
 }
 
 .section {
-  margin-block-end: var(--sp-8);
+  // margin-block-end: var(--sp-8);
 }
 
 .text-huge {
@@ -36,4 +36,47 @@ a:visited {
 .main {
   // max-width: var(--mobile-container-width);
   margin-inline: auto;
+}
+
+.grid {
+  display: grid;
+  row-gap: var(--sp-7);
+
+  @media (min-width: $bp-tablet) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--sp-5);
+    grid-template-areas:
+      "header header"
+      "img img"
+      "content content"
+      "news news"
+      "card1 card2"
+      "card3 card3";
+
+    .header {
+      grid-area: header;
+    }
+
+    picture {
+      grid-area: img;
+    }
+
+    .main__content {
+      grid-area: content;
+    }
+
+    aside {
+      grid-area: news;
+    }
+
+    .article:nth-of-type(1) {
+      grid-area: card1;
+    }
+    .article:nth-of-type(2) {
+      grid-area: card2;
+    }
+    .article:last-of-type {
+      grid-area: card3;
+    }
+  }
 }

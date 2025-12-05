@@ -1,11 +1,10 @@
 @use "utils" as *;
 @use "variables" as *;
-.main > picture > img {
-  margin-block-end: var(--sp-6);
-}
 
-.main__title {
-  margin-block-end: var(--sp-4);
+.main__content {
+  display: grid;
+  grid-template-columns: subgrid;
+  row-gap: var(--sp-5);
 }
 
 .main__content p {
