@@ -4,13 +4,28 @@
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .navigation {
   display: none;
+  list-style: none;
+  color: var(--clr-grey-3);
 
   @media (min-width: $bp-tablet) {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: var(--sp-7);
+  }
+
+  a {
+    font: inherit;
+    color: inherit;
+    transition: color 0.3s;
+
+    &:hover {
+      color: var(--clr-primary);
+    }
   }
 }
 

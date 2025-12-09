@@ -163,15 +163,28 @@ a:visited {
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .navigation {
   display: none;
+  list-style: none;
+  color: var(--clr-grey-3);
 }
 @media (min-width: 43.75rem) {
   .navigation {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: var(--sp-7);
   }
+}
+.navigation a {
+  font: inherit;
+  color: inherit;
+  transition: color 0.3s;
+}
+.navigation a:hover {
+  color: var(--clr-primary);
 }
 
 .navigation-mobile {
