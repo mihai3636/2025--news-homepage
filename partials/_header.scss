@@ -8,6 +8,10 @@
 
 .navigation {
   display: none;
+
+  @media (min-width: $bp-tablet) {
+    display: block;
+  }
 }
 
 .navigation-mobile {
@@ -30,6 +34,10 @@
   gap: var(--sp-6);
 
   padding-inline-start: var(--sp-7);
+
+  @media (min-width: $bp-tablet) {
+    display: none;
+  }
 }
 
 .open .navigation-mobile {
@@ -44,6 +52,10 @@ body:has(.open) {
     position: absolute;
     inset: 0;
     background-color: rgba(0, 0, 0, 0.5);
+
+    @media (min-width: $bp-tablet) {
+      display: none;
+    }
   }
 }
 
@@ -58,12 +70,14 @@ body:has(.open) {
   display: none;
 }
 
-.open .img-close {
-  display: block;
-}
+.open {
+  .img-close {
+    display: block;
+  }
 
-.open .img-burger {
-  display: none;
+  .img-burger {
+    display: none;
+  }
 }
 
 .header button {
@@ -71,4 +85,8 @@ body:has(.open) {
   cursor: pointer;
   border: none;
   background: none;
+
+  @media (min-width: $bp-tablet) {
+    display: none;
+  }
 }
