@@ -53,6 +53,16 @@
   @media (min-width: $bp-tablet) {
     display: none;
   }
+
+  a {
+    font: inherit;
+    color: inherit;
+    transition: color 0.3s;
+
+    &:hover {
+      color: var(--clr-primary);
+    }
+  }
 }
 
 .open .navigation-mobile {

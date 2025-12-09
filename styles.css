@@ -209,6 +209,14 @@ a:visited {
     display: none;
   }
 }
+.navigation-mobile a {
+  font: inherit;
+  color: inherit;
+  transition: color 0.3s;
+}
+.navigation-mobile a:hover {
+  color: var(--clr-primary);
+}
 
 .open .navigation-mobile {
   transform: translateX(40%);
