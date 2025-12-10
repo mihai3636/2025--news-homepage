@@ -78,6 +78,10 @@ body {
   min-height: 100vh;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 a:link,
 a:visited {
   text-decoration: none;
