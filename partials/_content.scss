@@ -4,9 +4,12 @@
 .main__content {
   display: grid;
   grid-template-columns: subgrid;
-  column-gap: subgrid;
-
+  column-gap: var(--sp-5);
   row-gap: var(--sp-5);
+
+  @media (min-width: $bp-desktop) {
+    column-gap: var(--sp-7);
+  }
 }
 
 .main__content p {
@@ -23,10 +26,10 @@
     font-size: var(--fs-3);
     font-weight: var(--fw-normal);
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: var(--ls-1);
 
     background-color: var(--clr-primary);
-    padding: 10px 30px;
+    padding: var(--sp-3) var(--sp-7);
   }
 
   &:hover,

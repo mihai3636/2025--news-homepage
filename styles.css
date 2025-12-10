@@ -6,6 +6,7 @@
   --clr-grey-2: hsl(233, 8%, 79%);
   --clr-grey-3: hsl(236, 13%, 42%);
   --clr-grey-4: hsl(240, 100%, 5%);
+  --clr-overlay: rgba(0, 0, 0, 0.5);
   --ff-main: "Inter";
   --fw-thin: 400;
   --fw-normal: 700;
@@ -37,6 +38,7 @@
   --sp-10: 5rem;
   --sp-11: 6rem;
   --sp-12: 8rem;
+  --ls-1: 0.1875rem;
   --desktop-container-width: 69.375rem;
   --mobile-container-width: 21.4375rem;
 }
@@ -232,7 +234,7 @@ body:has(.open)::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--clr-overlay);
 }
 @media (min-width: 43.75rem) {
   body:has(.open)::before {
@@ -305,8 +307,13 @@ body:has(.open)::before {
 .main__content {
   display: grid;
   grid-template-columns: subgrid;
-  column-gap: subgrid;
+  column-gap: var(--sp-5);
   row-gap: var(--sp-5);
+}
+@media (min-width: 62.5rem) {
+  .main__content {
+    column-gap: var(--sp-7);
+  }
 }
 
 .main__content p {
@@ -322,9 +329,9 @@ body:has(.open)::before {
   font-size: var(--fs-3);
   font-weight: var(--fw-normal);
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: var(--ls-1);
   background-color: var(--clr-primary);
-  padding: 10px 30px;
+  padding: var(--sp-3) var(--sp-7);
 }
 .main__content a:hover, .main__content a:active {
   background-color: var(--clr-grey-4);

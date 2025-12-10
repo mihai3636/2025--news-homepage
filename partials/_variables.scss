@@ -13,6 +13,8 @@ $bp-desktop: #{toRem(1000px)};
   --clr-grey-3: hsl(236, 13%, 42%);
   --clr-grey-4: hsl(240, 100%, 5%);
 
+  --clr-overlay: rgba(0, 0, 0, 0.5);
+
   --ff-main: "Inter";
 
   --fw-thin: 400;
@@ -49,6 +51,9 @@ $bp-desktop: #{toRem(1000px)};
   --sp-10: #{toRem(80px)};
   --sp-11: #{toRem(96px)};
   --sp-12: #{toRem(128px)};
+
+  // LETTER SPACING
+  --ls-1: #{toRem(3px)};
 
   --desktop-container-width: #{toRem(1110px)};
   --mobile-container-width: #{toRem(343px)};
